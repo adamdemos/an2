@@ -1,0 +1,13 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome !</h1>
+        <p>version: <b>App2 v.2.0</b></p>
+        <p>Server name: <b>@Environment.MachineName</b></p>
+        <p>Server IP address: <b>@HttpContext.Connection.LocalIpAddress.MapToIPv4()</b></p>
+        <p>Client IP address: <b>@HttpContext.Connection.RemoteIpAddress.MapToIPv4()</b></p>
+    </div>

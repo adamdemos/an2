@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netcoredemo1-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: netcoredemo1
+  template:
+    metadata:
+      labels:
+        app: netcoredemo1
+    spec:
+      containers:
+      - name: netcoredemo1-pod
+        image: cr.an2.local/netcoredemo1:v1
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: cr.an2.local.cred
+

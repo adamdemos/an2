@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app1", "app1", "{BFE8B61F-F8A8-4F75-81BF-660CE20CFE81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app2", "app2", "{67A2A539-2AA3-4B4F-A562-EE37D44AFA48}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "app1", "app1\app1.csproj", "{722C3582-B2BF-4C50-9595-DE4AED2DC82F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "app2", "app2\app2.csproj", "{0CCAAD57-EE73-4B12-86FF-9A31BE766D8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kubernetes", "kubernetes", "{3ADF816B-114F-41AA-B60B-6A1AD76F55BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".kube", ".kube", "{AE21FF6C-F91D-4CD9-BD8F-E9E9611AAC57}"
+	ProjectSection(SolutionItems) = preProject
+		.kube\config = .kube\config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app1-app2-via-ingress", "app1-app2-via-ingress", "{DA9E9D64-AA57-49B1-94A2-55E5FAFB3C5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "standalone-app1", "standalone-app1", "{2D65A0BB-1C73-4DA1-AFD8-FE1B663C49E6}"
+	ProjectSection(SolutionItems) = preProject
+		kubernetes\standalone-app1\deploy-app1-v1.yaml = kubernetes\standalone-app1\deploy-app1-v1.yaml
+		kubernetes\standalone-app1\deploy-app1-v2.yaml = kubernetes\standalone-app1\deploy-app1-v2.yaml
+		kubernetes\standalone-app1\service-app1.yaml = kubernetes\standalone-app1\service-app1.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "standalone-app2", "standalone-app2", "{0566D473-3E72-4539-A23B-27F7759BD7CC}"
+	ProjectSection(SolutionItems) = preProject
+		kubernetes\standalone-app2\deploy-app2-v1.yaml = kubernetes\standalone-app2\deploy-app2-v1.yaml
+		kubernetes\standalone-app2\deploy-app2-v2.yaml = kubernetes\standalone-app2\deploy-app2-v2.yaml
+		kubernetes\standalone-app2\service-app2.yaml = kubernetes\standalone-app2\service-app2.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{722C3582-B2BF-4C50-9595-DE4AED2DC82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{722C3582-B2BF-4C50-9595-DE4AED2DC82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{722C3582-B2BF-4C50-9595-DE4AED2DC82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{722C3582-B2BF-4C50-9595-DE4AED2DC82F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CCAAD57-EE73-4B12-86FF-9A31BE766D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CCAAD57-EE73-4B12-86FF-9A31BE766D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CCAAD57-EE73-4B12-86FF-9A31BE766D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CCAAD57-EE73-4B12-86FF-9A31BE766D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{722C3582-B2BF-4C50-9595-DE4AED2DC82F} = {BFE8B61F-F8A8-4F75-81BF-660CE20CFE81}
+		{0CCAAD57-EE73-4B12-86FF-9A31BE766D8A} = {67A2A539-2AA3-4B4F-A562-EE37D44AFA48}
+		{DA9E9D64-AA57-49B1-94A2-55E5FAFB3C5C} = {3ADF816B-114F-41AA-B60B-6A1AD76F55BF}
+		{2D65A0BB-1C73-4DA1-AFD8-FE1B663C49E6} = {3ADF816B-114F-41AA-B60B-6A1AD76F55BF}
+		{0566D473-3E72-4539-A23B-27F7759BD7CC} = {3ADF816B-114F-41AA-B60B-6A1AD76F55BF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73A04B07-598A-4DAA-B06A-5AC59A465E86}
+	EndGlobalSection
+EndGlobal

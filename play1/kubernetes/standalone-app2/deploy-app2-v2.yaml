@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netcoredemo1-deploy
+spec:
+  replicas: 4
+  minReadySeconds: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: demo1
+  template:
+    metadata:
+      labels:
+        app: demo1
+    spec:
+      containers:
+      - name: demo1-pod
+        image: adamdemos/netcoredemo1:v2
+        ports:
+        - containerPort: 80
